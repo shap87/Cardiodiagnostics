@@ -1,3 +1,6 @@
+import { Button } from '@/components/common'
+import { routes } from '@/utils/routes'
+
 const solutions = [
   {
     title: 'INDIVIDUALS',
@@ -32,7 +35,7 @@ const solutions = [
 ]
 export const HowItWorks = () => {
   return (
-    <section className="py-14 relative bg-gray">
+    <section className="py-10 py-24 relative bg-gray">
       <div className="container">
         <div className="text-center">
           <h3 className="mb-4 text-lg md:text-[33px] font-semibold leading-normal">
@@ -68,6 +71,11 @@ export const HowItWorks = () => {
               </li>
             ))}
           </ul>
+          <div className="text-center mt-20">
+            <Button href={routes.product} target="_blank">
+              How It Works
+            </Button>
+          </div>
         </div>
       </div>
     </section>
