@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import { useWindowSize } from '@/utils/useWindowSize'
 
@@ -10,7 +10,9 @@ export const Banner = () => {
       <img
         className="absolute left-0 top-0 w-full h-full object-cover -z-10"
         src={
-          width >= 768 ? '/images/banner-home.png' : '/images/banner-home-mobile.png'
+          width >= 768
+            ? '/images/banner-home.png'
+            : '/images/banner-home-mobile.png'
         }
         alt=""
       />
@@ -24,11 +26,9 @@ export const Banner = () => {
             Cardiovascular Care by Combining <br />
             Epigenetics, Genetics & AI
           </h2>
-          <p>
-            <p className="text-lg md:text-2xl text-white font-medium">
-              Join us as we enable a new era of heart disease prevention and
-              early detection.
-            </p>
+          <p className="text-lg md:text-2xl text-white font-medium">
+            Join us as we enable a new era of heart disease prevention and early
+            detection.
           </p>
         </div>
       </div>

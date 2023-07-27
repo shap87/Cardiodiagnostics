@@ -2,7 +2,12 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Lato } from 'next/font/google'
 
-const lato = Lato({ weight: '400', subsets: ['latin'] })
+const lato = Lato({
+  weight: ['300', '400', '700', '900'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Home - Cardio Diagnostics',
