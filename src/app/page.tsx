@@ -1,3 +1,10 @@
+// components
+import { Banner } from '@/components/pages/home'
+
 export default function Home() {
-  return <main>home</main>
+  return (
+    <main>
+      <Banner />
+    </main>
+  )
 }
