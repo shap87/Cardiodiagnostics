@@ -19,7 +19,7 @@ module.exports = {
         second: '#EA5252',
         gray: '#f9f9f9',
         'gray-black': '#6a6a6a',
-        'light-black': '#222222',
+        'second-black': '#222222',
       },
       borderRadius: {
         '4xl': '32px',

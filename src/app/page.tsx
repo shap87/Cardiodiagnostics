@@ -1,5 +1,10 @@
 // components
-import { Banner, HowItWorks, Clinical } from '@/components/pages/home'
+import {
+  Banner,
+  HowItWorks,
+  Clinical,
+  OurMission,
+} from '@/components/pages/home'
 
 export default function Home() {
   return (
@@ -7,6 +12,7 @@ export default function Home() {
       <Banner />
       <HowItWorks />
       <Clinical />
+      <OurMission />
     </main>
   )
 }

@@ -62,7 +62,7 @@ export const HowItWorks = () => {
                   src={solution.icon}
                   alt=""
                 />
-                <h4 className="mb-4 text-light-black uppercase text-2xl font-semibold">
+                <h4 className="mb-4 text-second-black uppercase text-2xl font-semibold">
                   {solution.title}
                 </h4>
                 <p className="text-gray-black text-[17px] leading-[2.2]">

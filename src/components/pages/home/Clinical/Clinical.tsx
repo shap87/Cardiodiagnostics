@@ -48,7 +48,7 @@ export const Clinical = () => {
                         src={solution.icon}
                         alt=""
                       />
-                      <h4 className="text-light-black text-[22px] md:text-2xl font-semibold">
+                      <h4 className="text-second-black text-[22px] md:text-2xl font-semibold">
                         {solution.title}
                       </h4>
                     </div>
