@@ -4,6 +4,7 @@ import {
   HowItWorks,
   Clinical,
   OurMission,
+  Newsletter,
 } from '@/components/pages/home'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <HowItWorks />
       <Clinical />
       <OurMission />
+      <Newsletter />
     </main>
   )
 }

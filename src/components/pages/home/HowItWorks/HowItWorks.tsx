@@ -72,7 +72,7 @@ export const HowItWorks = () => {
             ))}
           </ul>
           <div className="text-center mt-20">
-            <Button href={routes.product} target="_blank">
+            <Button color="orange" href={routes.product} target="_blank">
               How It Works
             </Button>
           </div>

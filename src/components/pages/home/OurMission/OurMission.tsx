@@ -34,7 +34,7 @@ export const OurMission = () => {
               can help save lives and significantly cut unnecessary treatment
               costs.
             </p>
-            <Button href={routes.contact} target="_blank">
+            <Button color="orange" href={routes.contact} target="_blank">
               Contact Us
             </Button>
           </div>

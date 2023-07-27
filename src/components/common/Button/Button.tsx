@@ -2,20 +2,52 @@ import { FC, ReactNode } from 'react'
 
 // libs
 import Link from 'next/link'
+import cn from 'classnames'
 
 interface ButtonProps {
-  href: string
-  target: string
+  href?: string
+  type?: 'submit' | 'button'
+  target?: string
+  color: 'red' | 'orange'
+  className?: string
   children: ReactNode
 }
-export const Button: FC<ButtonProps> = ({ href, target, children }) => {
-  return (
+export const Button: FC<ButtonProps> = ({
+  color,
+  className,
+  href,
+  type,
+  target,
+  children,
+}) => {
+  return type ? (
+    <button
+      type={type}
+      className={cn(
+        'inline-block text-white border text-2xl font-medium rounded-md py-2 px-6 transition-all',
+        color === 'red' &&
+          'bg-[#DF1F5A] border-[#DF1F5A] hover:bg-white hover:text-[#DF1F5A]',
+        color === 'orange' &&
+          'bg-second border-second hover:bg-white hover:text-second',
+        className,
+      )}
+    >
+      {children}
+    </button>
+  ) : href ? (
     <Link
       href={href}
       target={target}
-      className="inline-block text-white bg-second border border-second text-2xl font-medium rounded-md py-2 px-6 transition-all hover:bg-white hover:text-second"
+      className={cn(
+        'inline-block text-white border text-2xl font-medium rounded-md py-2 px-6 transition-all',
+        color === 'red' &&
+          'bg-[#DF1F5A] border-[#DF1F5A] hover:bg-white hover:text-[#DF1F5A]',
+        color === 'orange' &&
+          'bg-second border-second hover:bg-white hover:text-second',
+        className,
+      )}
     >
       {children}
     </Link>
-  )
+  ) : null
 }

@@ -18,7 +18,7 @@ export const Banner = () => {
       />
       <div className="container">
         <div className="text-center md:text-left">
-          <p className="text-main-red text-lg md:text-2xl mb-4 font-semibold">
+          <p className="text-primary text-lg md:text-2xl mb-4 font-semibold">
             CARDIO DIAGNOSTICS
           </p>
           <h2 className="mb-4 text-white text-2xl md:text-[38px] font-bold leading-[1.6]">
