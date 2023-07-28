@@ -80,8 +80,8 @@ export const Header = () => {
             <span />
           </div>
           <ul className={cn(styles.menu, { [styles.active]: showMenu })}>
-            {links.map((link) => (
-              <li className="relative group">
+            {links.map((link, index) => (
+              <li key={index} className="relative group">
                 <Link
                   href={link.href ?? ''}
                   target={link.target}
@@ -91,8 +91,8 @@ export const Header = () => {
                 </Link>
                 {link.subLinks && (
                   <ul className={styles.subMenu}>
-                    {link.subLinks.map((subLink) => (
-                      <li>
+                    {link.subLinks.map((subLink, index) => (
+                      <li key={index}>
                         <Link
                           href={subLink.href}
                           target={subLink.target}

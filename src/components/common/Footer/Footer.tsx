@@ -40,8 +40,8 @@ export const Footer = () => {
             <li>
               <h5>Home</h5>
             </li>
-            {links.home.map((link) => (
-              <li>
+            {links.home.map((link, index) => (
+              <li key={index}>
                 <Link href={link.link} legacyBehavior>
                   <a>{link.label}</a>
                 </Link>
@@ -52,8 +52,8 @@ export const Footer = () => {
             <li>
               <h5>Insights</h5>
             </li>
-            {links.insights.map((link) => (
-              <li>
+            {links.insights.map((link, index) => (
+              <li key={index}>
                 <Link href={link.link} legacyBehavior>
                   <a>{link.label}</a>
                 </Link>
@@ -64,8 +64,8 @@ export const Footer = () => {
             <li>
               <h5>About</h5>
             </li>
-            {links.about.map((link) => (
-              <li>
+            {links.about.map((link, index) => (
+              <li key={index}>
                 <Link href={link.link} legacyBehavior>
                   <a>{link.label}</a>
                 </Link>
@@ -76,8 +76,8 @@ export const Footer = () => {
             <li>
               <h5>Legal</h5>
             </li>
-            {links.legal.map((link) => (
-              <li>
+            {links.legal.map((link, index) => (
+              <li key={index}>
                 <Link href={link.link} legacyBehavior>
                   <a>{link.label}</a>
                 </Link>
