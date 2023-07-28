@@ -1,12 +1,17 @@
 'use client'
 
+// components
 import { useWindowSize } from '@/utils/useWindowSize'
+import { Animation } from '@/components/common'
 
 export const Banner = () => {
   const { width } = useWindowSize()
 
   return (
-    <section className="pt-20 md:pt-[186px] pb-[330px] md:pb-[178px] relative">
+    <Animation
+      type="fadeIn"
+      className="pt-20 md:pt-[186px] pb-[330px] md:pb-[178px] relative"
+    >
       <img
         className="absolute left-0 top-0 w-full h-full object-cover -z-10"
         src={
@@ -18,20 +23,31 @@ export const Banner = () => {
       />
       <div className="container">
         <div className="text-center md:text-left max-w-[600px]">
-          <p className="text-primary text-lg md:text-2xl mb-4 font-semibold">
+          <Animation
+            type="fromBottom"
+            className="text-primary text-lg md:text-2xl mb-4 font-semibold"
+          >
             CARDIO DIAGNOSTICS
-          </p>
-          <h2 className="mb-4 text-white text-2xl md:text-[38px] font-bold leading-[1.3] md:leading-[1.6]">
+          </Animation>
+          <Animation
+            component="h2"
+            type="fromBottom"
+            className="mb-4 text-white text-2xl md:text-[38px] font-bold leading-[1.3] md:leading-[1.6]"
+          >
             Defining a New Standard of <br />
             Cardiovascular Care by Combining <br />
             Epigenetics, Genetics & AI
-          </h2>
-          <p className="text-lg md:text-2xl text-white font-medium">
+          </Animation>
+          <Animation
+            component="p"
+            type="fromBottom"
+            className="text-lg md:text-2xl text-white font-medium"
+          >
             Join us as we enable a new era of heart disease prevention and early
             detection.
-          </p>
+          </Animation>
         </div>
       </div>
-    </section>
+    </Animation>
   )
 }

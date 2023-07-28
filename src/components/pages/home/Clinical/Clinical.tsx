@@ -1,3 +1,6 @@
+// components
+import { Animation } from '@/components/common'
+
 const solutions = [
   {
     title: 'Clinical Evidence',
@@ -29,16 +32,24 @@ export const Clinical = () => {
     <section className="py-20 md:py-24">
       <div className="container">
         <div className="text-center">
-          <h2 className="mb-12 text-[22px] md:text-[46px] font-bold">
+          <Animation
+            type="fadeIn"
+            component="h2"
+            className="mb-12 text-[22px] md:text-[46px] font-bold"
+          >
             Close the Clinical Care Gap With Epi+Gen CHD
-          </h2>
-          <p className="mb-4 text-lg font-medium leading-[1.6] text-gray-black">
+          </Animation>
+          <Animation
+            type="fadeIn"
+            component="p"
+            className="mb-4 text-lg font-medium leading-[1.6] text-gray-black"
+          >
             Epi+Gen CHD, the only integrated epigenetic-genetic coronary heart
             disease risk assessment test, enables more effective decision-making
             and earlier interventions.
-          </p>
+          </Animation>
           <div className="mt-14 flex flex-wrap items-center justify-between">
-            <div className="w-full md:w-[48%]">
+            <Animation type="fromLeft" className="w-full md:w-[48%]">
               <ul className="text-left">
                 {solutions.map((solution, index) => (
                   <li key={index} className="mb-4">
@@ -58,10 +69,10 @@ export const Clinical = () => {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="w-full md:w-[48%]">
+            </Animation>
+            <Animation type="fromRight" className="w-full md:w-[48%]">
               <img src="/images/clinical-people.png" alt="" />
-            </div>
+            </Animation>
           </div>
         </div>
       </div>

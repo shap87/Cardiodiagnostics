@@ -1,4 +1,4 @@
-import { Button } from '@/components/common'
+import { Animation, Button } from '@/components/common'
 import { routes } from '@/utils/routes'
 
 const solutions = [
@@ -38,20 +38,36 @@ export const HowItWorks = () => {
     <section className="py-20 md:py-24 relative bg-gray">
       <div className="container">
         <div className="text-center">
-          <h3 className="mb-8 text-lg md:text-[33px] font-semibold leading-normal">
+          <Animation
+            component="h3"
+            type="fromBottom"
+            className="mb-8 text-lg md:text-[33px] font-semibold leading-normal"
+          >
             Reduce the Incidence of Heart Disease & Accelerate Precision
             Medicine
-          </h3>
-          <p className="mb-16 text-lg md:text-[28px] font-medium leading-normal">
+          </Animation>
+          <Animation
+            component="p"
+            type="fromBottom"
+            className="mb-16 text-lg md:text-[28px] font-medium leading-normal"
+          >
             Enable data-driven multi-stakeholder collaborations among patients,
             innovative providers, health plans, employers, and governmental
             entities to drive transformative results in heart disease prevention
             and intervention.
-          </p>
-          <h2 className="mb-4 text-[22px] md:text-[46px] font-bold leading-normal">
+          </Animation>
+          <Animation
+            component="h2"
+            type="fromBottom"
+            className="mb-4 text-[22px] md:text-[46px] font-bold leading-normal"
+          >
             With Cardio Diagnostic’s state-of-the-art solutions:
-          </h2>
-          <ul className="mt-16 flex flex-wrap justify-center gap-y-8 lg:gap-y-20">
+          </Animation>
+          <Animation
+            component="ul"
+            type="fromBottom"
+            className="mt-16 flex flex-wrap justify-center gap-y-8 lg:gap-y-20"
+          >
             {solutions.map((solution, index) => (
               <li
                 key={index}
@@ -70,12 +86,12 @@ export const HowItWorks = () => {
                 </p>
               </li>
             ))}
-          </ul>
-          <div className="text-center mt-14">
+          </Animation>
+          <Animation type="fromBottom" className="text-center mt-14">
             <Button color="orange" href={routes.product} target="_blank">
               How It Works
             </Button>
-          </div>
+          </Animation>
         </div>
       </div>
     </section>

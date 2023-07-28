@@ -6,6 +6,7 @@ import { routes } from '@/utils/routes'
 
 // styles
 import styles from './Footer.module.scss'
+import { Animation } from '@/components/common'
 
 const links = {
   home: [
@@ -29,97 +30,99 @@ const links = {
 export const Footer = () => {
   return (
     <footer className={cn('pt-20 pb-7 bg-[#10217d]', styles.footer)}>
-      <div className="container">
-        <img
-          className="mb-12 w-full max-w-[500px]"
-          src="/images/logo.png"
-          alt=""
-        />
-        <div className="flex flex-wrap items-start justify-between gap-y-4">
-          <ul>
-            <li>
-              <h5>Home</h5>
-            </li>
-            {links.home.map((link, index) => (
-              <li key={index}>
-                <Link href={link.link} legacyBehavior>
-                  <a>{link.label}</a>
-                </Link>
+      <Animation type="fadeIn">
+        <div className="container">
+          <img
+            className="mb-12 w-full max-w-[500px]"
+            src="/images/logo.png"
+            alt=""
+          />
+          <div className="flex flex-wrap items-start justify-between gap-y-4">
+            <ul>
+              <li>
+                <h5>Home</h5>
               </li>
-            ))}
-          </ul>
-          <ul>
-            <li>
-              <h5>Insights</h5>
-            </li>
-            {links.insights.map((link, index) => (
-              <li key={index}>
-                <Link href={link.link} legacyBehavior>
-                  <a>{link.label}</a>
-                </Link>
+              {links.home.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.link} legacyBehavior>
+                    <a>{link.label}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ul>
+              <li>
+                <h5>Insights</h5>
               </li>
-            ))}
-          </ul>
-          <ul>
-            <li>
-              <h5>About</h5>
-            </li>
-            {links.about.map((link, index) => (
-              <li key={index}>
-                <Link href={link.link} legacyBehavior>
-                  <a>{link.label}</a>
-                </Link>
+              {links.insights.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.link} legacyBehavior>
+                    <a>{link.label}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ul>
+              <li>
+                <h5>About</h5>
               </li>
-            ))}
-          </ul>
-          <ul>
-            <li>
-              <h5>Legal</h5>
-            </li>
-            {links.legal.map((link, index) => (
-              <li key={index}>
-                <Link href={link.link} legacyBehavior>
-                  <a>{link.label}</a>
-                </Link>
+              {links.about.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.link} legacyBehavior>
+                    <a>{link.label}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ul>
+              <li>
+                <h5>Legal</h5>
               </li>
-            ))}
-          </ul>
-          <ul>
-            <li>
-              <h5>Contact Us</h5>
-            </li>
-            <li>
-              <p>
-                Cardio Diagnostics Inc. <br />
-                400 N Aberdeen St, Suite 900 <br />
-                Chicago IL 60642
-              </p>
-            </li>
-            <li>
-              <div className={styles.social}>
-                <a
-                  className={styles.facebook}
-                  href="https://www.facebook.com/CDIncPreventHeartDisease/"
-                  target="_blank"
-                />
-                <a
-                  className={styles.linkedin}
-                  href="https://www.linkedin.com/company/cardio-diagnostics-inc/"
-                  target="_blank"
-                />
-                <a
-                  className={styles.instagram}
-                  href="https://www.instagram.com/cardiodiagnosticsinc/"
-                  target="_blank"
-                />
-              </div>
-            </li>
-          </ul>
+              {links.legal.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.link} legacyBehavior>
+                    <a>{link.label}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ul>
+              <li>
+                <h5>Contact Us</h5>
+              </li>
+              <li>
+                <p>
+                  Cardio Diagnostics Inc. <br />
+                  400 N Aberdeen St, Suite 900 <br />
+                  Chicago IL 60642
+                </p>
+              </li>
+              <li>
+                <div className={styles.social}>
+                  <a
+                    className={styles.facebook}
+                    href="https://www.facebook.com/CDIncPreventHeartDisease/"
+                    target="_blank"
+                  />
+                  <a
+                    className={styles.linkedin}
+                    href="https://www.linkedin.com/company/cardio-diagnostics-inc/"
+                    target="_blank"
+                  />
+                  <a
+                    className={styles.instagram}
+                    href="https://www.instagram.com/cardiodiagnosticsinc/"
+                    target="_blank"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+          <p className="text-[22px] text-center mt-6 pt-6 border-t-2 border-white mb-0">
+            © Copyright Cardio Diagnostics Inc.
+          </p>
         </div>
-        <p className="text-[22px] text-center mt-6 pt-6 border-t-2 border-white mb-0">
-          © Copyright Cardio Diagnostics Inc.
-        </p>
-      </div>
+      </Animation>
     </footer>
   )
 }
