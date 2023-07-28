@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'ETmodules';
+  src: url('/fonts/ETmodules.ttf') format('truetype');
+}
+
+body {
+  font-size: 14px;
+  color: #666;
+  background-color: #fff;
+  line-height: 1.7em;
+  font-weight: 500;
+}
+
 label {
   display: block;
   margin-bottom: 16px;

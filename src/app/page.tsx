@@ -6,15 +6,16 @@ import {
   OurMission,
   Newsletter,
 } from '@/components/pages/home'
+import { Layout } from '@/components/common'
 
 export default function Home() {
   return (
-    <main>
+    <Layout>
       <Banner />
       <HowItWorks />
       <Clinical />
       <OurMission />
       <Newsletter />
-    </main>
+    </Layout>
   )
 }

@@ -1,0 +1,93 @@
+.footer {
+  a,
+  h5,
+  p {
+    color: white;
+  }
+  ul {
+    width: 19%;
+    h5 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    a {
+      display: inline-block;
+      font-size: 14px;
+      margin-bottom: 11px;
+      transition: 0.3s linear;
+      &:hover,
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    a {
+      display: inline-block;
+      font-size: 14px;
+      margin-bottom: 0;
+      transition: 0.3s linear;
+      width: 32px;
+      height: 32px;
+      border: 2px solid white;
+      border-radius: 3px;
+      position: relative;
+      &:hover,
+      &:active {
+        opacity: 0.7;
+      }
+      &:before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        font-size: 16px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: ETmodules, sans-serif;
+        speak: none;
+      }
+      &.facebook {
+        &:before {
+          content: '\e093';
+        }
+      }
+      &.linkedin {
+        &:before {
+          content: '\e09d';
+        }
+      }
+      &.instagram {
+        &:before {
+          content: '\e09a';
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    ul {
+      width: 48%;
+    }
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .footer {
+    ul {
+      width: 100%;
+    }
+  }
+}
