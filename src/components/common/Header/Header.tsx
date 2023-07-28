@@ -68,7 +68,7 @@ export const Header = () => {
   return (
     <header className={cn('fixed z-40 left-0 top-0 w-full', styles.header)}>
       <div className="container">
-        <div className="flex items-center justify-between gap-8">
+        <div className={cn("flex items-center justify-between gap-8", styles.animation)}>
           <img
             className="max-w-[200px] lg:max-w-[270px]"
             src="/images/logo.png"

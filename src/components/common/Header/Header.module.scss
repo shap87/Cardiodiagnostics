@@ -1,11 +1,13 @@
 .header {
-  animation: fromTopAnim 0.4s linear forwards;
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(16, 33, 125, 1) 0%,
     rgba(22, 194, 213, 1) 100%
   );
+  .animation {
+    animation: fromTopAnim 0.6s linear forwards;
+  }
   ul {
     a {
       display: inline-block;
