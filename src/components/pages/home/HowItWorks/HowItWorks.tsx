@@ -35,7 +35,7 @@ const solutions = [
 ]
 export const HowItWorks = () => {
   return (
-    <section className="py-10 py-24 relative bg-gray">
+    <section className="py-20 md:py-24 relative bg-gray">
       <div className="container">
         <div className="text-center">
           <h3 className="mb-8 text-lg md:text-[33px] font-semibold leading-normal">
@@ -48,14 +48,14 @@ export const HowItWorks = () => {
             entities to drive transformative results in heart disease prevention
             and intervention.
           </p>
-          <h2 className="mb-4 text-[22px] md:text-[46px] font-bold">
+          <h2 className="mb-4 text-[22px] md:text-[46px] font-bold leading-normal">
             With Cardio Diagnostic’s state-of-the-art solutions:
           </h2>
-          <ul className="mt-20 flex flex-wrap justify-center gap-y-8 lg:gap-y-20">
+          <ul className="mt-16 flex flex-wrap justify-center gap-y-8 lg:gap-y-20">
             {solutions.map((solution, index) => (
               <li
                 key={index}
-                className="shadow-card bg-white rounded-4xl w-full sm:w-[47%] lg:w-[31%] py-10 px-2 mx-[1.1%]"
+                className="shadow-card bg-white rounded-4xl w-full sm:w-[47%] lg:w-[31%] py-10 px-4 mx-[1.1%]"
               >
                 <img
                   className="mx-auto mb-4 w-[85px]"

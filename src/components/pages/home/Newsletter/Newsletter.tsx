@@ -10,10 +10,10 @@ const newsletterSchema = Yup.object().shape({
 })
 export const Newsletter = () => {
   return (
-    <section className="py-10 py-32">
+    <section className="py-28 md:py-32">
       <div className="container">
         <div className="text-center">
-          <h2 className="mb-14 text-[22px] md:text-[46px] font-bold">
+          <h2 className="mb-12 md:mb-14 text-[22px] md:text-[46px] font-bold">
             The Heart Health Newsletter
           </h2>
           <p className="mb-4 text-lg font-medium leading-[1.6] text-gray-black">
@@ -35,7 +35,7 @@ export const Newsletter = () => {
             }}
           >
             {() => (
-              <Form className="mt-12 text-left shadow-form p-8 md:py-14 md:px-8 rounded-[22px] mx-auto max-w-[940px]">
+              <Form className="mt-12 text-left shadow-form px-8 py-12 md:px-8 rounded-[22px] mx-auto max-w-[940px]">
                 <div className="flex flex-wrap items-start justify-between">
                   <label className="w-full md:w-[48%]">
                     <p>

@@ -24,6 +24,7 @@
     margin-left: auto;
     align-items: center;
     gap: 24px;
+    transition: 0.3s linear;
     > li {
       > a {
         position: relative;
@@ -51,6 +52,7 @@
     }
     &.active {
       display: flex;
+      transform: translate(0, 0);
     }
   }
   .subMenu {
@@ -136,6 +138,10 @@
       background: white;
       flex-direction: column;
       align-items: flex-start;
+      transform: translate(100%, 0);
+      &.active {
+        animation: .3s fadeIn linear forwards;
+      }
       > li {
         > a {
           background-color: rgba(0, 0, 0, 0.03);
@@ -161,5 +167,14 @@
     .burger {
       display: flex;
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }

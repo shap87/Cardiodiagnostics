@@ -6,7 +6,7 @@ export const Banner = () => {
   const { width } = useWindowSize()
 
   return (
-    <section className="pt-14 md:pt-[186px] pb-64 md:pb-[178px] relative">
+    <section className="pt-20 md:pt-[186px] pb-[330px] md:pb-[178px] relative">
       <img
         className="absolute left-0 top-0 w-full h-full object-cover -z-10"
         src={
@@ -21,7 +21,7 @@ export const Banner = () => {
           <p className="text-primary text-lg md:text-2xl mb-4 font-semibold">
             CARDIO DIAGNOSTICS
           </p>
-          <h2 className="mb-4 text-white text-2xl md:text-[38px] font-bold leading-[1.6]">
+          <h2 className="mb-4 text-white text-2xl md:text-[38px] font-bold leading-[1.3] md:leading-[1.6]">
             Defining a New Standard of <br />
             Cardiovascular Care by Combining <br />
             Epigenetics, Genetics & AI

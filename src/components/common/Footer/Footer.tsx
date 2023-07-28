@@ -28,7 +28,7 @@ const links = {
 }
 export const Footer = () => {
   return (
-    <footer className={cn('pt-10 md:pt-20 pb-7 bg-[#10217d]', styles.footer)}>
+    <footer className={cn('pt-20 pb-7 bg-[#10217d]', styles.footer)}>
       <div className="container">
         <img
           className="mb-12 w-full max-w-[500px]"
@@ -116,7 +116,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <p className="text-[22px] text-center mt-6 pt-8 border-t-2 border-white mb-0">
+        <p className="text-[22px] text-center mt-6 pt-6 border-t-2 border-white mb-0">
           © Copyright Cardio Diagnostics Inc.
         </p>
       </div>

@@ -12,11 +12,11 @@ export const OurMission = () => {
             src="/images/our-mission.png"
             alt=""
           />
-          <div className="-mt-20 md:mt-0 relative z-20 ml-auto w-11/12 md:w-[59%] bg-white rounded-2xl px-12 pt-16 pb-8">
+          <div className="-mt-20 md:mt-0 relative z-20 ml-auto w-11/12 md:w-[59%] bg-white rounded-2xl px-10 md:px-12 pt-10 md:pt-16 pb-8">
             <h2 className="mb-8 text-[22px] md:text-[32px] font-bold">
               Better Heart Health is Our Mission
             </h2>
-            <p className="mb-2 text-lg font-medium leading-[1.9] text-gray-black">
+            <p className="mb-4 text-lg font-medium leading-[1.56] md:leading-[1.9] text-gray-black">
               Cardio Diagnostics’ vision is to transform the approach to heart
               disease from treatment-based to prevention-based. We believe that
               prevention and early detection should be the norm, and that
@@ -25,7 +25,7 @@ export const OurMission = () => {
               can help save lives and significantly cut unnecessary treatment
               costs.
             </p>
-            <p className="mb-3 text-lg font-medium leading-[1.9] text-gray-black">
+            <p className="mb-4 text-lg font-medium leading-[1.56] md:leading-[1.9] text-gray-black">
               Our team is made up of subject matter experts with deep expertise
               in cardiovascular disease prevention, clinical testing, artificial
               intelligence, and engineering. We also have personal experience

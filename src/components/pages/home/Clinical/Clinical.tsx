@@ -26,7 +26,7 @@ const solutions = [
 ]
 export const Clinical = () => {
   return (
-    <section className="py-10 py-24">
+    <section className="py-20 md:py-24">
       <div className="container">
         <div className="text-center">
           <h2 className="mb-12 text-[22px] md:text-[46px] font-bold">
