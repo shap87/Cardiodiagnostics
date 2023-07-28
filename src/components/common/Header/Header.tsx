@@ -65,7 +65,7 @@ export const Header = () => {
   return (
     <header className={cn('fixed z-40 left-0 top-0 w-full', styles.header)}>
       <div className="container">
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center justify-between gap-8">
           <img
             className="max-w-[200px] lg:max-w-[270px]"
             src="/images/logo.png"
@@ -81,13 +81,15 @@ export const Header = () => {
           </div>
           <ul className={cn(styles.menu, { [styles.active]: showMenu })}>
             {links.map((link, index) => (
-              <li key={index} className="relative group">
+              <li key={index} className="relative">
                 <Link
                   href={link.href ?? ''}
                   target={link.target}
                   legacyBehavior
                 >
-                  <a className="py-6">{link.label}</a>
+                  <a className={cn({ [styles.arrow]: link.subLinks })}>
+                    {link.label}
+                  </a>
                 </Link>
                 {link.subLinks && (
                   <ul className={styles.subMenu}>
@@ -108,7 +110,7 @@ export const Header = () => {
             ))}
           </ul>
           <Button
-            className="text-sm hidden lg:flex"
+            className="text-sm hidden lg:flex py-[14px] px-[34px]"
             color="red"
             href={routes.contact}
           >

@@ -29,7 +29,7 @@ export const Clinical = () => {
     <section className="py-10 py-24">
       <div className="container">
         <div className="text-center">
-          <h2 className="mb-4 text-[22px] md:text-[46px] font-bold">
+          <h2 className="mb-12 text-[22px] md:text-[46px] font-bold">
             Close the Clinical Care Gap With Epi+Gen CHD
           </h2>
           <p className="mb-4 text-lg font-medium leading-[1.6] text-gray-black">
@@ -37,7 +37,7 @@ export const Clinical = () => {
             disease risk assessment test, enables more effective decision-making
             and earlier interventions.
           </p>
-          <div className="mt-10 flex flex-wrap items-center justify-between">
+          <div className="mt-14 flex flex-wrap items-center justify-between">
             <div className="w-full md:w-[48%]">
               <ul className="text-left">
                 {solutions.map((solution, index) => (

@@ -38,11 +38,11 @@ export const HowItWorks = () => {
     <section className="py-10 py-24 relative bg-gray">
       <div className="container">
         <div className="text-center">
-          <h3 className="mb-4 text-lg md:text-[33px] font-semibold leading-normal">
+          <h3 className="mb-8 text-lg md:text-[33px] font-semibold leading-normal">
             Reduce the Incidence of Heart Disease & Accelerate Precision
             Medicine
           </h3>
-          <p className="mb-4 text-lg md:text-[28px] font-medium leading-normal">
+          <p className="mb-16 text-lg md:text-[28px] font-medium leading-normal">
             Enable data-driven multi-stakeholder collaborations among patients,
             innovative providers, health plans, employers, and governmental
             entities to drive transformative results in heart disease prevention
@@ -51,11 +51,11 @@ export const HowItWorks = () => {
           <h2 className="mb-4 text-[22px] md:text-[46px] font-bold">
             With Cardio Diagnostic’s state-of-the-art solutions:
           </h2>
-          <ul className="mt-8 flex flex-wrap justify-center gap-y-8 lg:gap-y-20">
+          <ul className="mt-20 flex flex-wrap justify-center gap-y-8 lg:gap-y-20">
             {solutions.map((solution, index) => (
               <li
                 key={index}
-                className="shadow-card bg-white rounded-4xl w-full sm:w-[47%] lg:w-[31%] py-10 px-4 mx-[1.1%]"
+                className="shadow-card bg-white rounded-4xl w-full sm:w-[47%] lg:w-[31%] py-10 px-2 mx-[1.1%]"
               >
                 <img
                   className="mx-auto mb-4 w-[85px]"
@@ -65,13 +65,13 @@ export const HowItWorks = () => {
                 <h4 className="mb-4 text-second-black uppercase text-2xl font-semibold">
                   {solution.title}
                 </h4>
-                <p className="text-gray-black text-[17px] leading-[2.2]">
+                <p className="text-gray-black text-[17px] leading-[2.24]">
                   {solution.description}
                 </p>
               </li>
             ))}
           </ul>
-          <div className="text-center mt-20">
+          <div className="text-center mt-14">
             <Button color="orange" href={routes.product} target="_blank">
               How It Works
             </Button>

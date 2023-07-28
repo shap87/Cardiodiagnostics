@@ -24,7 +24,7 @@ export const Button: FC<ButtonProps> = ({
     <button
       type={type}
       className={cn(
-        'inline-block text-white border text-2xl font-medium rounded-md py-2 px-6 transition-all',
+        'inline-block text-white border text-2xl font-medium rounded-md py-3 px-6 transition-all',
         color === 'red' &&
           'bg-[#DF1F5A] border-[#DF1F5A] hover:bg-transparent hover:text-[#DF1F5A]',
         color === 'orange' &&
@@ -39,7 +39,7 @@ export const Button: FC<ButtonProps> = ({
       href={href}
       target={target}
       className={cn(
-        'inline-block text-white border text-2xl font-medium rounded-md py-2 px-6 transition-all',
+        'inline-block text-white border text-2xl font-medium rounded-md py-3 px-6 transition-all',
         color === 'red' &&
           'bg-[#DF1F5A] border-[#DF1F5A] hover:bg-transparent hover:text-[#DF1F5A]',
         color === 'orange' &&

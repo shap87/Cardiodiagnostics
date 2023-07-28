@@ -6,7 +6,7 @@ export const Banner = () => {
   const { width } = useWindowSize()
 
   return (
-    <section className="pt-14 md:pt-36 pb-64 md:pb-36 relative">
+    <section className="pt-14 md:pt-[186px] pb-64 md:pb-[178px] relative">
       <img
         className="absolute left-0 top-0 w-full h-full object-cover -z-10"
         src={
@@ -17,7 +17,7 @@ export const Banner = () => {
         alt=""
       />
       <div className="container">
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left max-w-[600px]">
           <p className="text-primary text-lg md:text-2xl mb-4 font-semibold">
             CARDIO DIAGNOSTICS
           </p>

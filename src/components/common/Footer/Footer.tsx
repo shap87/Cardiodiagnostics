@@ -31,7 +31,7 @@ export const Footer = () => {
     <footer className={cn('pt-10 md:pt-20 pb-7 bg-[#10217d]', styles.footer)}>
       <div className="container">
         <img
-          className="mb-7 w-full max-w-[500px]"
+          className="mb-12 w-full max-w-[500px]"
           src="/images/logo.png"
           alt=""
         />
@@ -116,7 +116,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <p className="text-[22px] text-center mt-7 pt-7 border-t-2 border-white mb-0">
+        <p className="text-[22px] text-center mt-6 pt-8 border-t-2 border-white mb-0">
           © Copyright Cardio Diagnostics Inc.
         </p>
       </div>

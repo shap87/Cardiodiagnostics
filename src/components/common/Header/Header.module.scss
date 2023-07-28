@@ -23,20 +23,23 @@
     display: flex;
     margin-left: auto;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
     > li {
       > a {
         position: relative;
-        padding-right: 20px;
-        &:before {
-          font-family: ETmodules, sans-serif;
-          content: '3';
-          font-size: 16px;
-          position: absolute;
-          right: 0;
-          top: 50%;
-          transform: translate(0, -50%);
-          font-weight: 800;
+        padding: 28px 0;
+        &.arrow {
+          padding-right: 20px;
+          &:before {
+            font-family: ETmodules, sans-serif;
+            content: '3';
+            font-size: 16px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            font-weight: 800;
+          }
         }
       }
       &:active,
