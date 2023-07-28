@@ -26,9 +26,9 @@ export const Button: FC<ButtonProps> = ({
       className={cn(
         'inline-block text-white border text-2xl font-medium rounded-md py-2 px-6 transition-all',
         color === 'red' &&
-          'bg-[#DF1F5A] border-[#DF1F5A] hover:bg-white hover:text-[#DF1F5A]',
+          'bg-[#DF1F5A] border-[#DF1F5A] hover:bg-transparent hover:text-[#DF1F5A]',
         color === 'orange' &&
-          'bg-second border-second hover:bg-white hover:text-second',
+          'bg-second border-second hover:bg-transparent hover:text-second',
         className,
       )}
     >
@@ -41,9 +41,9 @@ export const Button: FC<ButtonProps> = ({
       className={cn(
         'inline-block text-white border text-2xl font-medium rounded-md py-2 px-6 transition-all',
         color === 'red' &&
-          'bg-[#DF1F5A] border-[#DF1F5A] hover:bg-white hover:text-[#DF1F5A]',
+          'bg-[#DF1F5A] border-[#DF1F5A] hover:bg-transparent hover:text-[#DF1F5A]',
         color === 'orange' &&
-          'bg-second border-second hover:bg-white hover:text-second',
+          'bg-second border-second hover:bg-transparent hover:text-second',
         className,
       )}
     >

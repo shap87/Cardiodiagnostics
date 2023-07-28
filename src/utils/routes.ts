@@ -1,4 +1,5 @@
 export const routes = {
+  home: '/',
   product: '/product',
   contact: '/contact',
   healthcareProviders: '/healthcare-providers',
@@ -10,5 +11,11 @@ export const routes = {
   news: '/news',
   team: '/team',
   termsConditions: '/terms-conditions',
-  privacyPolicy: '/Privacy Policy',
+  privacyPolicy: '/privacy-policy',
+  investorsSecFilings: '/investors-sec-filings',
+  analystCoverage: '/analyst-coverage',
+  healthPlans: '/health-plans',
+  womensHealth: '/womens-health',
+  eventsBeckersWebinar: '/events-beckers-webinar',
+  videos: '/videos',
 }
