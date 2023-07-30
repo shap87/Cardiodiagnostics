@@ -25,7 +25,6 @@ module.exports = {
         '4xl': '32px',
       },
       boxShadow: {
-        card: '0px 4px 30px 0px rgba(0,0,0,0.2)',
         form: '0px 4px 60px 0px rgba(0,0,0,0.07)',
       },
     },

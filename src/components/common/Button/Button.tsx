@@ -4,13 +4,17 @@ import { FC, ReactNode } from 'react'
 import Link from 'next/link'
 import cn from 'classnames'
 
+// assets
+import styles from './Button.module.scss'
+
 interface ButtonProps {
   href?: string
   type?: 'submit' | 'button'
   target?: string
-  color: 'red' | 'orange'
+  color: 'red' | 'blue'
   className?: string
   children: ReactNode
+  arrow?: boolean
 }
 export const Button: FC<ButtonProps> = ({
   color,
@@ -19,16 +23,16 @@ export const Button: FC<ButtonProps> = ({
   type,
   target,
   children,
+  arrow,
 }) => {
   return type ? (
     <button
       type={type}
       className={cn(
-        'inline-block text-white border text-2xl font-medium rounded-md py-3 px-6 transition-all',
-        color === 'red' &&
-          'bg-[#DF1F5A] border-[#DF1F5A] hover:bg-transparent hover:text-[#DF1F5A]',
-        color === 'orange' &&
-          'bg-second border-second hover:bg-transparent hover:text-second',
+        styles.button,
+        color === 'red' && styles.red,
+        color === 'blue' && styles.blue,
+        arrow && styles.arrow,
         className,
       )}
     >
@@ -39,11 +43,10 @@ export const Button: FC<ButtonProps> = ({
       href={href}
       target={target}
       className={cn(
-        'inline-block text-white border text-2xl font-medium rounded-md py-3 px-6 transition-all',
-        color === 'red' &&
-          'bg-[#DF1F5A] border-[#DF1F5A] hover:bg-transparent hover:text-[#DF1F5A]',
-        color === 'orange' &&
-          'bg-second border-second hover:bg-transparent hover:text-second',
+        styles.button,
+        color === 'red' && styles.red,
+        color === 'blue' && styles.blue,
+        arrow && styles.arrow,
         className,
       )}
     >

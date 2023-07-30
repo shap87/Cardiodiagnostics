@@ -66,7 +66,7 @@ export const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
 
   return (
-    <header className={cn('fixed z-40 left-0 top-0 w-full', styles.header)}>
+    <header className={cn('fixed z-40 left-0 top-0 w-full bg-[#10217b]', styles.header)}>
       <div className="container">
         <div className={cn("flex items-center justify-between gap-8", styles.animation)}>
           <img

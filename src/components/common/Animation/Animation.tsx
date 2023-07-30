@@ -5,6 +5,7 @@ import { FC, ReactNode, useEffect } from 'react'
 // libs
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import cn from 'classnames'
 
 // components
 import { animations } from '@/utils/animations'
@@ -12,7 +13,7 @@ import { animations } from '@/utils/animations'
 interface AnimationProps {
   children: ReactNode
   className?: string
-  component?: 'h2' | 'section' | 'p' | 'h3' | 'li' | 'ul'
+  component?: 'h1' | 'h2' | 'section' | 'p' | 'h3' | 'li' | 'ul'
   type: 'fadeIn' | 'fromBottom' | 'fromLeft' | 'fromRight' | 'fromTop'
 }
 export const Animation: FC<AnimationProps> = ({
@@ -32,7 +33,17 @@ export const Animation: FC<AnimationProps> = ({
     }
   }, [control, inView])
 
-  return component === 'h2' ? (
+  return component === 'h1' ? (
+    <motion.h1
+      ref={ref}
+      variants={animations[type]}
+      initial="hidden"
+      animate={control}
+      className={className}
+    >
+      {children}
+    </motion.h1>
+  ) : component === 'h2' ? (
     <motion.h2
       ref={ref}
       variants={animations[type]}
@@ -58,7 +69,7 @@ export const Animation: FC<AnimationProps> = ({
       variants={animations[type]}
       initial="hidden"
       animate={control}
-      className={className}
+      className={cn('text-sm', className)}
     >
       {children}
     </motion.p>
@@ -68,7 +79,7 @@ export const Animation: FC<AnimationProps> = ({
       variants={animations[type]}
       initial="hidden"
       animate={control}
-      className={className}
+      className={cn('font-bold text-[20px] md:text-[25px]', className)}
     >
       {children}
     </motion.h3>

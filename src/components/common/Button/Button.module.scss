@@ -1,0 +1,32 @@
+.button {
+  @apply uppercase relative z-10 inline-block text-white border text-sm font-medium rounded-md py-4 px-8 transition-all;
+  &:hover {
+  }
+  &.red {
+    @apply rounded-md bg-[#DF1F5A] border-[#DF1F5A] hover:bg-transparent hover:text-[#DF1F5A];
+  }
+  &.blue {
+    @apply bg-[#16c2d5] border-[#16c2d5] rounded-full;
+  }
+  &.arrow {
+    &:hover,
+    &:active {
+      &:before {
+        opacity: 1;
+        right: 2px;
+      }
+    }
+    &:before {
+      opacity: 0;
+      content: '\35';
+      font-size: 22px;
+      font-weight: 400;
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translate(0, -50%);
+      font-family: ETmodules, sans-serif;
+      transition: 0.3s linear;
+    }
+  }
+}

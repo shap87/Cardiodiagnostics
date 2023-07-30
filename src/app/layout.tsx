@@ -1,10 +1,15 @@
 import './globals.scss'
 import type { Metadata } from 'next'
-import { Lato } from 'next/font/google'
+import { Inter, Open_Sans } from 'next/font/google'
 
-const lato = Lato({
-  weight: ['300', '400', '700', '900'],
+const openSans = Open_Sans({
+  weight: ['300', '400', '500', '700', '800'],
   style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 })
@@ -20,7 +25,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={lato.className} suppressHydrationWarning={true}>{children}</body>
+      <body className={openSans.className} suppressHydrationWarning={true}>
+        {children}
+      </body>
     </html>
   )
 }

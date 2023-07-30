@@ -40,7 +40,7 @@ export const OurMission = () => {
               with heart disease and want to help you and your loved ones avoid
               its devastating impact.
             </p>
-            <Button color="orange" href={routes.contact} target="_blank">
+            <Button arrow color="blue" href={routes.contact} target="_blank">
               Contact Us
             </Button>
           </Animation>
