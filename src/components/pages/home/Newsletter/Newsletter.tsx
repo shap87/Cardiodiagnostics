@@ -28,7 +28,7 @@ export const Newsletter = () => {
             }}
           >
             {() => (
-              <Form className="mt-12 text-center shadow-form px-8 py-12 md:px-8 rounded-[40px] mx-auto max-w-[940px]">
+              <Form className="mt-12 text-center shadow-form p-[6%] rounded-[40px] mx-auto max-w-[940px]">
                 <h2 className="mb-4">The Heart Health Newsletter</h2>
                 <p className="mb-8">
                   Filter out the noise and take control of your heart health

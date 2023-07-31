@@ -17,58 +17,65 @@ const links = [
     label: 'Our Tests',
     subLinks: [
       {
-        label: 'PrecisionCHD',
-        href: 'https://chddetection.com',
-        target: '_blank',
+        label: 'EPI+GEN CHD',
+        href: routes.epigenChd,
       },
-      { label: 'Epi+Gen CHD', href: routes.product },
-      {
-        label: 'Orders',
-        href: 'https://form.jotform.com/230023462409143',
-        target: '_blank',
-      },
+      { label: 'PRECISION CHD', href: routes.precisionChd },
     ],
   },
   {
-    label: 'Solutions',
+    label: 'WHO WE SERVE',
     subLinks: [
-      { label: 'Healthcare Providers', href: routes.healthcareProviders },
-      { label: 'Health Plans', href: routes.healthPlans },
-      { label: 'Employers', href: routes.forEmployers },
-      { label: 'Concierge Medicine', href: routes.forConciergeMedicine },
-      { label: 'Women’s Health', href: routes.womensHealth },
+      { label: 'HEALTH CARE PROVIDERS', href: routes.healthCareProviders },
+      { label: 'HEALTH PLANS', href: routes.healthPlans },
+      { label: 'EMPLOYERS', href: routes.employers },
+      { label: 'HEALTHCARE SYSTEMS', href: routes.healthcareSystems },
+      { label: 'PUBLIC SECTOR', href: routes.publicSector },
+      { label: 'PHARMA', href: routes.pharma },
+      { label: 'LIFE INSURANCE', href: routes.lifeInsurance },
     ],
   },
   {
-    label: 'Insights',
+    label: 'OUR TECHNOLOGY',
+    subLinks: [{ label: 'OVERVIEW', href: routes.overview }],
+  },
+  {
+    label: 'INSIGHTS',
     subLinks: [
-      { label: 'Events', href: routes.eventsBeckersWebinar },
-      { label: 'Blog', href: routes.blog },
-      { label: 'Science', href: routes.science },
-      { label: 'Videos', href: routes.videos },
+      { label: 'BLOG', href: routes.blog },
+      { label: 'SCIENCE', href: routes.science },
+      { label: 'EVENTS', href: routes.events },
+      { label: 'VIDEOS', href: routes.videos },
+      { label: 'HELP', href: routes.help },
     ],
   },
   {
-    label: 'Investor Relations',
+    label: 'INVESTOR RELATIONS',
     subLinks: [
-      { label: 'SEC Filings', href: routes.investorsSecFilings },
-      { label: 'Press Releases', href: routes.news },
-      { label: 'Analyst Coverage', href: routes.analystCoverage },
+      { label: 'SEC FILINGS', href: routes.secFilings },
+      { label: 'PRESS RELEASES', href: routes.pressReleases },
+      { label: 'ANALYST COVERAGE', href: routes.analystCoverage },
+      { label: 'CORPORATE OVERVIEW', href: routes.corporateOverview },
     ],
-  },
-  {
-    label: 'Careers',
-    href: 'https://www.linkedin.com/jobs/search/?currentJobId=3108138630&f_C=20501700&geoId=92000000',
-    target: '_blank',
   },
 ]
 export const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
 
   return (
-    <header className={cn('fixed z-40 left-0 top-0 w-full bg-[#10217b]', styles.header)}>
+    <header
+      className={cn(
+        'fixed z-40 left-0 top-0 w-full bg-[#10217b]',
+        styles.header,
+      )}
+    >
       <div className="container">
-        <div className={cn("flex items-center justify-between gap-8", styles.animation)}>
+        <div
+          className={cn(
+            'flex items-center justify-between gap-8',
+            styles.animation,
+          )}
+        >
           <img
             className="max-w-[200px] lg:max-w-[270px]"
             src="/images/logo.png"
@@ -85,11 +92,7 @@ export const Header = () => {
           <ul className={cn(styles.menu, { [styles.active]: showMenu })}>
             {links.map((link, index) => (
               <li key={index} className="relative">
-                <Link
-                  href={link.href ?? ''}
-                  target={link.target}
-                  legacyBehavior
-                >
+                <Link href={''} legacyBehavior>
                   <a className={cn({ [styles.arrow]: link.subLinks })}>
                     {link.label}
                   </a>
@@ -98,11 +101,7 @@ export const Header = () => {
                   <ul className={styles.subMenu}>
                     {link.subLinks.map((subLink, index) => (
                       <li key={index}>
-                        <Link
-                          href={subLink.href}
-                          target={subLink.target}
-                          legacyBehavior
-                        >
+                        <Link href={subLink.href} legacyBehavior>
                           <a className="py-2">{subLink.label}</a>
                         </Link>
                       </li>
@@ -111,14 +110,14 @@ export const Header = () => {
                 )}
               </li>
             ))}
+            <Button
+              className="text-sm hidden lg:flex !py-[8px] px-[34px]"
+              color="red"
+              href={routes.contact}
+            >
+              Contact
+            </Button>
           </ul>
-          <Button
-            className="text-sm hidden lg:flex py-[14px] px-[34px]"
-            color="red"
-            href={routes.contact}
-          >
-            Contact
-          </Button>
         </div>
       </div>
     </header>
