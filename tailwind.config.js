@@ -25,7 +25,7 @@ module.exports = {
         '4xl': '32px',
       },
       boxShadow: {
-        form: '0px 4px 60px 0px rgba(0,0,0,0.07)',
+        form: '6px 6px 18px 0px rgba(0,0,0,0.3)',
       },
     },
   },

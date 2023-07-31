@@ -43,25 +43,16 @@ main {
 label {
   display: block;
   margin-bottom: 16px;
-  p {
-    display: flex;
-    align-items: center;
-    color: #222222;
-    margin-bottom: 12px;
-    font-size: 18px;
-    span {
-      display: block;
-      color: #e04562;
-    }
-  }
   input {
-    font-size: 16px;
-    border-radius: 6px;
-    border: 1px solid #b0b0b0;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 1px;
+    border: 1px solid black;
     padding: 15px;
     width: 100%;
     color: #000000;
     transition: 0.3s linear;
+    text-transform: uppercase;
     &:hover,
     &:focus {
       border-color: #10217d;
@@ -75,10 +66,13 @@ label {
 }
 
 .checkbox {
+  text-transform: uppercase;
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
+  color: black;
+  font-weight: 700;
   transition: 0.3s linear;
   &:hover,
   &:active {
@@ -88,7 +82,6 @@ label {
     width: auto;
     display: none;
     &:checked ~ .icon {
-      border-color: #17a8e3;
       &:before {
         opacity: 1;
       }
@@ -113,7 +106,7 @@ label {
       transform: translate(-50%, -50%);
       font-size: 12px;
       transition: 0.3s linear;
-      color: #17a8e3;
+      color: black;
     }
   }
 }
