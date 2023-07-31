@@ -35,32 +35,28 @@ const solutions = [
 ]
 export const HowItWorks = () => {
   return (
-    <section className="py-20 md:py-24 relative">
+    <section className="py-12 md:py-16 relative">
       <div className="container">
         <div className="text-center">
-          <Animation
-            component="h2"
-            type="fromBottom"
-            className="mb-4 text-[22px] md:text-[46px] font-bold leading-normal"
-          >
+          <Animation component="h2" type="fromBottom" className="mb-4">
             With Cardio Diagnostic’s state-of-the-art solutions:
           </Animation>
           <Animation
             component="ul"
             type="fromBottom"
-            className="mt-16 flex flex-wrap justify-center gap-y-8 lg:gap-y-16"
+            className="mt-14 flex flex-wrap justify-center gap-y-8 lg:gap-y-14"
           >
             {solutions.map((solution, index) => (
               <li
                 key={index}
-                className="w-full sm:w-[47%] lg:w-[31%] px-4 mx-[1.1%]"
+                className="w-full sm:w-[47%] lg:w-[31%] mx-[1.1%]"
               >
                 <img
-                  className="mx-auto mb-4 w-[80px]"
+                  className="mx-auto mb-1 w-[80px]"
                   src={solution.icon}
                   alt=""
                 />
-                <h4 className="mb-4 text-[#e1388b] small-caps">
+                <h4 className="mb-2 text-[#e1388b] small-caps">
                   {solution.title}
                 </h4>
                 <p>{solution.description}</p>

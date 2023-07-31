@@ -3,7 +3,7 @@ import { routes } from '@/utils/routes'
 
 export const OurMission = () => {
   return (
-    <section className="py-14">
+    <section className="py-14 md:py-24">
       <div className="container">
         <div className="flex flex-wrap justify-between items-center gap-y-6">
           <Animation type="fromLeft" className="w-full md:w-[48%]">
@@ -13,8 +13,8 @@ export const OurMission = () => {
             type="fromRight"
             className="relative z-20 ml-auto w-full md:w-[48%]"
           >
-            <h2 className="mb-4">Better Heart Health is Our Mission</h2>
-            <p className="mb-4">
+            <h2 className="mb-4 leading-[1.28]">Better Heart Health is Our Mission</h2>
+            <p className="mb-8 leading-[1.7]">
               Cardio Diagnostics’ vision is to transform the approach to heart
               disease from treatment-based to prevention-based. We believe that
               prevention and early detection should be the norm, and that
@@ -23,7 +23,7 @@ export const OurMission = () => {
               can help save lives and significantly cut unnecessary treatment
               costs.
             </p>
-            <p className="mb-4">
+            <p className="mb-8 leading-[1.7]">
               Our team is made up of subject matter experts with deep expertise
               in cardiovascular disease prevention, clinical testing, artificial
               intelligence, and engineering. We also have personal experience

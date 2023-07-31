@@ -29,11 +29,11 @@ const solutions = [
 ]
 export const Clinical = () => {
   return (
-    <section className="py-20 md:py-24">
+    <section className="py-12 md:py-16">
       <div className="container">
-        <div className="mt-14 flex flex-wrap items-center justify-between gap-y-6">
+        <div className="flex flex-wrap items-center justify-between gap-y-6">
           <Animation type="fromLeft" className="w-full md:w-[48%]">
-            <Animation type="fadeIn" component="h2" className="mb-4">
+            <Animation type="fadeIn" component="h2" className="mb-6 leading-[1.2]">
               Close the Clinical Care Gap With Epi+Gen CHD
             </Animation>
             <Animation type="fadeIn" component="p">
@@ -49,7 +49,7 @@ export const Clinical = () => {
         <Animation
           component="ul"
           type="fromBottom"
-          className="mt-16 flex flex-wrap text-center justify-center gap-y-8 lg:gap-y-12"
+          className="mt-16 md:mt-32 flex flex-wrap text-center justify-center gap-y-8 lg:gap-y-16"
         >
           {solutions.map((solution, index) => (
             <li
@@ -57,11 +57,11 @@ export const Clinical = () => {
               className="w-full sm:w-[47%] lg:w-[31%] px-4 mx-[1.1%]"
             >
               <img
-                className="mx-auto mb-4 w-[80px]"
+                className="mx-auto mb-1 w-[80px]"
                 src={solution.icon}
                 alt=""
               />
-              <h4 className="mb-4 text-[#e1388b]">{solution.title}</h4>
+              <h4 className="mb-3 text-[#e1388b]">{solution.title}</h4>
               <p>{solution.description}</p>
             </li>
           ))}

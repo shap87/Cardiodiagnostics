@@ -77,18 +77,10 @@ export const Header = () => {
           )}
         >
           <img
-            className="max-w-[200px] lg:max-w-[270px]"
+            className="max-w-[200px] xl:max-w-[254px]"
             src="/images/logo.png"
             alt=""
           />
-          <div
-            className={cn(styles.burger, { [styles.active]: showMenu })}
-            onClick={() => setShowMenu(!showMenu)}
-          >
-            <span />
-            <span />
-            <span />
-          </div>
           <ul className={cn(styles.menu, { [styles.active]: showMenu })}>
             {links.map((link, index) => (
               <li key={index} className="relative">
@@ -111,13 +103,22 @@ export const Header = () => {
               </li>
             ))}
             <Button
-              className="text-sm hidden lg:flex !py-[8px] px-[34px]"
+              className="text-sm hidden lg:flex !py-[6px] !px-[12px] ml-2"
               color="red"
               href={routes.contact}
             >
               Contact
             </Button>
           </ul>
+          <div className={styles.search} />
+          <div
+            className={cn(styles.burger, { [styles.active]: showMenu })}
+            onClick={() => setShowMenu(!showMenu)}
+          >
+            <span />
+            <span />
+            <span />
+          </div>
         </div>
       </div>
     </header>

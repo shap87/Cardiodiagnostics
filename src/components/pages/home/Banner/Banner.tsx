@@ -10,7 +10,7 @@ export const Banner = () => {
   return (
     <Animation
       type="fadeIn"
-      className="pt-20 md:pt-[186px] pb-[330px] md:pb-[178px] relative"
+      className="pt-20 md:pt-[162px] pb-[130px] md:pb-[86px] relative"
     >
       <img
         className="absolute left-0 top-0 w-full h-full object-cover -z-10"
@@ -25,22 +25,23 @@ export const Banner = () => {
         <div className="text-left">
           <Animation
             type="fromBottom"
-            className="text-primary text-base md:text-[19px] mb-4 font-semibold"
+            className="text-primary text-base md:text-[19px] mb-8 font-semibold"
           >
             CARDIO DIAGNOSTICS
           </Animation>
           <Animation
             component="h1"
             type="fromBottom"
-            className="max-w-[480px] md:max-w-none mb-4 text-white text-2xl md:text-[52px] font-bold leading-[1.3] md:leading-[1.6]"
+            className="max-w-[480px] md:max-w-[700px] mb-4 text-white text-2xl md:text-[52px] font-bold leading-[1.12]"
           >
-            Defining a New Standard of <br className="hidden sm:block" />
-            Cardiovascular Care by Combining <br className="hidden sm:block" />
+            Defining a New Standard of
+            Cardiovascular Care by
+            Combining <br className="hidden sm:block" />
             Epigenetics, Genetics & AI
           </Animation>
           <Animation
             component="p"
-            className="text-white mb-5"
+            className="text-base text-white mb-5"
             type="fromBottom"
           >
             Join us as we enable a new era of heart disease prevention and early
@@ -56,7 +57,7 @@ export const Banner = () => {
           </Animation>
           <Animation
             component="p"
-            className="text-white max-w-[600px]"
+            className="text-base text-white max-w-[600px]"
             type="fromBottom"
           >
             Enable data-driven multi-stakeholder collaborations among patients,

@@ -10,7 +10,7 @@ const newsletterSchema = Yup.object().shape({
 })
 export const Newsletter = () => {
   return (
-    <section className="py-28 md:py-32">
+    <section className="pt-10 pb-10 md:pt-16 md:pb-24">
       <div className="container">
         <Animation type="fromBottom">
           <Formik
@@ -28,9 +28,9 @@ export const Newsletter = () => {
             }}
           >
             {() => (
-              <Form className="mt-12 text-center shadow-form p-[6%] rounded-[40px] mx-auto max-w-[940px]">
+              <Form className="text-center shadow-form p-[7%] rounded-xl md:rounded-[40px]">
                 <h2 className="mb-4">The Heart Health Newsletter</h2>
-                <p className="mb-8">
+                <p className="mb-10">
                   Filter out the noise and take control of your heart health
                   with our monthly newsletter.
                 </p>
@@ -47,7 +47,7 @@ export const Newsletter = () => {
                     />
                   </label>
                 </div>
-                <div className="flex flex-wrap items-start gap-x-4 mb-4">
+                <div className="flex flex-wrap items-start gap-x-4 mb-4 py-4 md:pt-10">
                   <label className="checkbox">
                     <Field type="checkbox" name="is_heart_healthy" />
                     <span className="icon" /> I want to get Heart Healthy
@@ -61,7 +61,7 @@ export const Newsletter = () => {
                     <span className="icon" /> I accept the Terms and Conditions.
                   </label>
                 </div>
-                <div className="text-center">
+                <div className="text-center max-w-[620px] mx-auto">
                   <Button
                     className="w-full !bg-[#e1388b] !border-[#e1388b] !rounded-full hover:!text-[#e1388b] hover:!bg-transparent"
                     color="red"

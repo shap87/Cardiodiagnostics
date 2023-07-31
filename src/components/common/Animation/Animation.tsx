@@ -5,7 +5,6 @@ import { FC, ReactNode, useEffect } from 'react'
 // libs
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import cn from 'classnames'
 
 // components
 import { animations } from '@/utils/animations'
@@ -69,7 +68,7 @@ export const Animation: FC<AnimationProps> = ({
       variants={animations[type]}
       initial="hidden"
       animate={control}
-      className={cn('text-sm', className)}
+      className={className}
     >
       {children}
     </motion.p>
@@ -79,7 +78,7 @@ export const Animation: FC<AnimationProps> = ({
       variants={animations[type]}
       initial="hidden"
       animate={control}
-      className={cn('font-bold text-[20px] md:text-[25px]', className)}
+      className={className}
     >
       {children}
     </motion.h3>

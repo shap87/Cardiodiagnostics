@@ -40,7 +40,7 @@ const links = {
 }
 export const Footer = () => {
   return (
-    <footer className={cn('pt-20 pb-7', styles.footer)}>
+    <footer className={cn('py-12 md:py-20', styles.footer)}>
       <Animation type="fadeIn">
         <div className="container">
           <div className="flex flex-wrap items-start justify-between gap-y-4">
