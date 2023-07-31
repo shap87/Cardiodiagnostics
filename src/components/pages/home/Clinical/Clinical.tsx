@@ -31,50 +31,43 @@ export const Clinical = () => {
   return (
     <section className="py-20 md:py-24">
       <div className="container">
-        <div className="text-center">
-          <Animation
-            type="fadeIn"
-            component="h2"
-            className="mb-12 text-[22px] md:text-[46px] font-bold"
-          >
-            Close the Clinical Care Gap With Epi+Gen CHD
-          </Animation>
-          <Animation
-            type="fadeIn"
-            component="p"
-            className="mb-4 text-lg font-medium leading-[1.6] text-gray-black"
-          >
-            Epi+Gen CHD, the only integrated epigenetic-genetic coronary heart
-            disease risk assessment test, enables more effective decision-making
-            and earlier interventions.
-          </Animation>
-          <div className="mt-14 flex flex-wrap items-center justify-between">
-            <Animation type="fromLeft" className="w-full md:w-[48%]">
-              <ul className="text-left">
-                {solutions.map((solution, index) => (
-                  <li key={index} className="mb-4">
-                    <div className="mb-4 flex items-center">
-                      <img
-                        className="mr-4 w-[50px]"
-                        src={solution.icon}
-                        alt=""
-                      />
-                      <h4 className="text-second-black text-[22px] md:text-2xl font-semibold">
-                        {solution.title}
-                      </h4>
-                    </div>
-                    <p className="text-gray-black text-lg font-medium">
-                      {solution.description}
-                    </p>
-                  </li>
-                ))}
-              </ul>
+        <div className="mt-14 flex flex-wrap items-center justify-between">
+          <Animation type="fromLeft" className="w-full md:w-[48%] mb-6 md:mb-0">
+            <Animation type="fadeIn" component="h2" className="mb-4">
+              Close the Clinical Care Gap With Epi+Gen CHD
             </Animation>
-            <Animation type="fromRight" className="w-full md:w-[48%]">
-              <img src="/images/clinical-people.png" alt="" />
+            <Animation type="fadeIn" component="p">
+              Epi+Gen CHD, the only integrated epigenetic-genetic coronary heart
+              disease risk assessment test, enables more effective
+              decision-making and earlier interventions.
             </Animation>
-          </div>
+          </Animation>
+          <Animation type="fromRight" className="w-full md:w-[48%]">
+            <img src="/images/clinical-people.png" alt="" />
+          </Animation>
         </div>
+        <Animation
+          component="ul"
+          type="fromBottom"
+          className="mt-16 flex flex-wrap text-center justify-center gap-y-8 lg:gap-y-12"
+        >
+          {solutions.map((solution, index) => (
+            <li
+              key={index}
+              className="w-full sm:w-[47%] lg:w-[31%] px-4 mx-[1.1%]"
+            >
+              <img
+                className="mx-auto mb-4 w-[80px]"
+                src={solution.icon}
+                alt=""
+              />
+              <h4 className="mb-4 text-[#e1388b]">
+                {solution.title}
+              </h4>
+              <p>{solution.description}</p>
+            </li>
+          ))}
+        </Animation>
       </div>
     </section>
   )

@@ -48,12 +48,12 @@ export const HowItWorks = () => {
           <Animation
             component="ul"
             type="fromBottom"
-            className="mt-16 flex flex-wrap justify-center gap-y-8 lg:gap-y-20"
+            className="mt-16 flex flex-wrap justify-center gap-y-8 lg:gap-y-16"
           >
             {solutions.map((solution, index) => (
               <li
                 key={index}
-                className="w-full sm:w-[47%] lg:w-[31%] py-10 px-4 mx-[1.1%]"
+                className="w-full sm:w-[47%] lg:w-[31%] px-4 mx-[1.1%]"
               >
                 <img
                   className="mx-auto mb-4 w-[80px]"
