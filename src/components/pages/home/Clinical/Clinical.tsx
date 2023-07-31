@@ -31,8 +31,8 @@ export const Clinical = () => {
   return (
     <section className="py-20 md:py-24">
       <div className="container">
-        <div className="mt-14 flex flex-wrap items-center justify-between">
-          <Animation type="fromLeft" className="w-full md:w-[48%] mb-6 md:mb-0">
+        <div className="mt-14 flex flex-wrap items-center justify-between gap-y-6">
+          <Animation type="fromLeft" className="w-full md:w-[48%]">
             <Animation type="fadeIn" component="h2" className="mb-4">
               Close the Clinical Care Gap With Epi+Gen CHD
             </Animation>
@@ -61,9 +61,7 @@ export const Clinical = () => {
                 src={solution.icon}
                 alt=""
               />
-              <h4 className="mb-4 text-[#e1388b]">
-                {solution.title}
-              </h4>
+              <h4 className="mb-4 text-[#e1388b]">{solution.title}</h4>
               <p>{solution.description}</p>
             </li>
           ))}
