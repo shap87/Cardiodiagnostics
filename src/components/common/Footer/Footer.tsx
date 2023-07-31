@@ -2,59 +2,60 @@ import cn from 'classnames'
 import Link from 'next/link'
 
 // components
-import { routes } from '@/utils/routes'
+import { Animation } from '@/components/common'
 
 // styles
 import styles from './Footer.module.scss'
-import { Animation } from '@/components/common'
 
 const links = {
-  home: [
-    { link: routes.product, label: 'Product' },
-    { link: routes.healthcareProviders, label: 'Healthcare Providers' },
-    { link: routes.forConciergeMedicine, label: 'Concierge Medicine' },
-    { link: routes.forEmployers, label: 'Employers' },
-    { link: routes.heartAmbassadors, label: 'Heart Ambassadors' },
+  quickLinks: [
+    { link: '', label: 'Products' },
+    { link: '', label: 'Case Studies' },
+    { link: '', label: 'Media Library' },
+    { link: '', label: 'Knowledge Center' },
+    { link: '', label: 'Divi AI Community' },
   ],
-  insights: [
-    { link: routes.science, label: 'Science' },
-    { link: routes.blog, label: 'Blog' },
-    { link: routes.news, label: 'News' },
+  about: [
+    { link: '', label: 'Company Info' },
+    { link: '', label: 'Investor Relations' },
+    { link: '', label: 'Careers' },
+    { link: '', label: 'News and Press' },
+    { link: '', label: 'Events' },
+    { link: '', label: 'Customer Stories' },
   ],
-  about: [{ link: routes.team, label: 'Team' }],
-  legal: [
-    { link: routes.termsConditions, label: 'Terms and Conditions' },
-    { link: routes.privacyPolicy, label: 'Privacy Policy' },
+  siteInfo: [
+    { link: '', label: 'Legal' },
+    { link: '', label: 'Privacy Policy' },
+    { link: '', label: 'Cookies Settings' },
+    { link: '', label: 'Terms of Use' },
+    { link: '', label: 'Trademarks' },
+    { link: '', label: 'Trust Center' },
+  ],
+  contact: [
+    { link: '', label: 'FAQ' },
+    { link: '', label: 'Contact Us' },
+    { link: '', label: 'Chat Now' },
+    { link: '', label: 'Newsletter' },
   ],
 }
 export const Footer = () => {
   return (
-    <footer className={cn('pt-20 pb-7 bg-[#10217d]', styles.footer)}>
+    <footer className={cn('pt-20 pb-7', styles.footer)}>
       <Animation type="fadeIn">
         <div className="container">
-          <img
-            className="mb-12 w-full max-w-[500px]"
-            src="/images/logo.png"
-            alt=""
-          />
           <div className="flex flex-wrap items-start justify-between gap-y-4">
+            <div className="w-full lg:w-[15%] mb-6 lg:mb-0 mr-4">
+              <img
+                className="w-full max-w-[500px]"
+                src="/images/logo.png"
+                alt=""
+              />
+            </div>
             <ul>
               <li>
-                <h5>Home</h5>
+                <h5>Quick Links</h5>
               </li>
-              {links.home.map((link, index) => (
-                <li key={index}>
-                  <Link href={link.link} legacyBehavior>
-                    <a>{link.label}</a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <ul>
-              <li>
-                <h5>Insights</h5>
-              </li>
-              {links.insights.map((link, index) => (
+              {links.quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link href={link.link} legacyBehavior>
                     <a>{link.label}</a>
@@ -76,9 +77,9 @@ export const Footer = () => {
             </ul>
             <ul>
               <li>
-                <h5>Legal</h5>
+                <h5>Site Info</h5>
               </li>
-              {links.legal.map((link, index) => (
+              {links.siteInfo.map((link, index) => (
                 <li key={index}>
                   <Link href={link.link} legacyBehavior>
                     <a>{link.label}</a>
@@ -88,39 +89,17 @@ export const Footer = () => {
             </ul>
             <ul>
               <li>
-                <h5>Contact Us</h5>
+                <h5>Contact</h5>
               </li>
-              <li>
-                <p>
-                  Cardio Diagnostics Inc. <br />
-                  400 N Aberdeen St, Suite 900 <br />
-                  Chicago IL 60642
-                </p>
-              </li>
-              <li>
-                <div className={styles.social}>
-                  <a
-                    className={styles.facebook}
-                    href="https://www.facebook.com/CDIncPreventHeartDisease/"
-                    target="_blank"
-                  />
-                  <a
-                    className={styles.linkedin}
-                    href="https://www.linkedin.com/company/cardio-diagnostics-inc/"
-                    target="_blank"
-                  />
-                  <a
-                    className={styles.instagram}
-                    href="https://www.instagram.com/cardiodiagnosticsinc/"
-                    target="_blank"
-                  />
-                </div>
-              </li>
+              {links.contact.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.link} legacyBehavior>
+                    <a>{link.label}</a>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-          <p className="text-[22px] text-center mt-6 pt-6 border-t-2 border-white mb-0">
-            © Copyright Cardio Diagnostics Inc.
-          </p>
         </div>
       </Animation>
     </footer>
