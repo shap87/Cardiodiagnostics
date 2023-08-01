@@ -12,7 +12,7 @@ import { animations } from '@/utils/animations'
 interface AnimationProps {
   children: ReactNode
   className?: string
-  component?: 'h1' | 'h2' | 'section' | 'p' | 'h3' | 'li' | 'ul'
+  component?: 'h1' | 'h2' | 'section' | 'p' | 'h3' | 'h4' | 'li' | 'ul'
   type: 'fadeIn' | 'fromBottom' | 'fromLeft' | 'fromRight' | 'fromTop'
 }
 export const Animation: FC<AnimationProps> = ({
@@ -52,6 +52,16 @@ export const Animation: FC<AnimationProps> = ({
     >
       {children}
     </motion.h2>
+  ) : component === 'h4' ? (
+    <motion.h4
+      ref={ref}
+      variants={animations[type]}
+      initial="hidden"
+      animate={control}
+      className={className}
+    >
+      {children}
+    </motion.h4>
   ) : component === 'section' ? (
     <motion.section
       ref={ref}

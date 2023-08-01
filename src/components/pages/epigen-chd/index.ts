@@ -1,0 +1,6 @@
+export { About } from './About/About'
+export { WhyEpigen } from './WhyEpigen/WhyEpigen'
+export { ForWhom } from './ForWhom/ForWhom'
+export { ForYou } from './ForYou/ForYou'
+export { HowItWorks } from './HowItWorks/HowItWorks'
+export { TakeControl } from './TakeControl/TakeControl'

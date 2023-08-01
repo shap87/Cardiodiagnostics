@@ -8,6 +8,9 @@
   &.blue {
     @apply bg-[#16c2d5] border-[#16c2d5] rounded-full;
   }
+  &.purple {
+    @apply bg-[#793aff] border-[#793aff] rounded-full;
+  }
   &.arrow {
     &:hover,
     &:active {

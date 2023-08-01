@@ -59,7 +59,7 @@ const links = [
     ],
   },
 ]
-export const Header = () => {
+export function Header() {
   const [showMenu, setShowMenu] = useState(false)
 
   return (
