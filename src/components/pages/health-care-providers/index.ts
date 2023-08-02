@@ -1,0 +1,6 @@
+export { OurApproach } from './OurApproach/OurApproach '
+export { Stats } from './Stats/Stats'
+export { ScreeningMethods } from './ScreeningMethods/ScreeningMethods'
+export { SurveyResult } from './SurveyResult/SurveyResult'
+export { Info } from './Info/Info'
+export { InfoForm } from './InfoForm/InfoForm'

@@ -9,23 +9,17 @@ import Link from 'next/link'
 const newsletterSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
 })
-export const ProvideOutcomesForm = () => {
+export const InfoForm = () => {
   return (
     <section className="pt-10 pb-10 md:pt-16 md:pb-24">
       <div className="container">
         <Animation type="fromBottom">
-          <h2 className="text-center py-7 font-light lg:text-[55px] md:text-4xl text-3xl !leading-[1.4]">
-            Provide unparalleled health outcomes while reducing spend with
-            Epi+Gen CHD
-          </h2>
           <Formik
             validationSchema={newsletterSchema}
             initialValues={{
               name: '',
               last: '',
-              phone: '',
               email: '',
-              company: '',
             }}
             onSubmit={(values) => {
               console.log(values, 'values')
@@ -34,6 +28,14 @@ export const ProvideOutcomesForm = () => {
           >
             {() => (
               <Form className="text-center shadow-form p-[7%] rounded-xl md:rounded-[40px]">
+                <h2 className="mb-4 text-[26px] font-medium">
+                  Would you like more information on the Epi+Gen CHD test or are
+                  you considering it for your patients?
+                </h2>
+                <h3 className="mb-10 text-[18px] font-medium">
+                  Request our Healthcare Professionals Information Guide for the
+                  Epi+Gen CHD Test
+                </h3>
                 <div className="text-left flex flex-wrap items-start justify-between">
                   <label className="w-full md:w-[48%] mb-12">
                     <Field name="name" placeholder="Name" />
@@ -41,28 +43,22 @@ export const ProvideOutcomesForm = () => {
                   <label className="w-full md:w-[48%] mb-12">
                     <Field name="last" placeholder="Last" />
                   </label>
-                  <label className="w-full md:w-[48%] mb-12">
-                    <Field name="phone" placeholder="Phone" />
-                  </label>
-                  <label className="w-full md:w-[48%] mb-12">
-                    <Field name="email" placeholder="Email Address" />
-                    <ErrorMessage
-                      name="email"
-                      component="p"
-                      className="input-error"
-                    />
-                  </label>
                 </div>
                 <label className="w-full mb-12">
-                  <Field name="company" placeholder="Company Name" />
+                  <Field name="email" placeholder="E-mail" />
+                  <ErrorMessage
+                    name="email"
+                    component="p"
+                    className="input-error"
+                  />
                 </label>
                 <div className="text-center mx-auto mb-6">
                   <Button
-                    className="!px-[80px] !bg-[#e1388b] !border-[#e1388b] !rounded-full hover:!text-[#e1388b] hover:!bg-transparent"
+                    className="!px-2.5 !py-4 !text-xs !max-w-[230px] !bg-[#e1388b] !border-[#e1388b] !rounded-full hover:!text-[#e1388b] hover:!bg-transparent"
                     color="red"
                     type="submit"
                   >
-                    Submit
+                    Receive Your Healthcare Professional Guide
                   </Button>
                 </div>
                 <p className="text-[15px] text-start">
