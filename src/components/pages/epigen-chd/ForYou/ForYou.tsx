@@ -1,14 +1,6 @@
 // components
-import { Animation, Button } from '@/components/common'
+import { Animation } from '@/components/common'
 import Link from 'next/link'
-
-const ulData = [
-  'Are younger than 35.',
-  'Have already been diagnosed with coronary heart disease.',
-  'Have had a heart attack or any cardiac operation.',
-  'Have angina (pain, heaviness, or discomfort in your chest, arm, jaw or shoulder), especially with exertion.',
-  'Have had an abnormal cardiac stress test.',
-]
 
 export const ForYou = () => {
   return (
