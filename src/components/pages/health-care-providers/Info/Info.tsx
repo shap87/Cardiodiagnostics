@@ -1,5 +1,5 @@
 // components
-import { Accordion, Animation } from '@/components/common'
+import { Accordion } from '@/components/common'
 
 const column1 = [
   {

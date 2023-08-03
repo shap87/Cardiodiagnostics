@@ -1,6 +1,5 @@
 // components
 import { Animation } from '@/components/common'
-import Link from 'next/link'
 
 const data = [
   {

@@ -1,5 +1,5 @@
 // components
-import { Animation, Button } from '@/components/common'
+import { Animation } from '@/components/common'
 
 const ulData = [
   'Are younger than 35.',
