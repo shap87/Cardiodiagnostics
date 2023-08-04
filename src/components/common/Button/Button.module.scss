@@ -11,6 +11,9 @@
   &.purple {
     @apply bg-[#793aff] border-[#793aff] rounded-full;
   }
+  &.white {
+    @apply bg-white border-white text-[#ea6b92] rounded-full;
+  }
   &.arrow {
     &:hover,
     &:active {
