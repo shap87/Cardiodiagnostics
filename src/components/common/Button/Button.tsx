@@ -11,7 +11,7 @@ interface ButtonProps {
   href?: string
   type?: 'submit' | 'button'
   target?: string
-  color: 'red' | 'blue' | 'purple'
+  color: 'red' | 'blue' | 'purple' | 'white'
   className?: string
   children: ReactNode
   arrow?: boolean
@@ -33,6 +33,7 @@ export const Button: FC<ButtonProps> = ({
         color === 'red' && styles.red,
         color === 'blue' && styles.blue,
         color === 'purple' && styles.purple,
+        color === 'white' && styles.white,
         arrow && styles.arrow,
         className,
       )}
