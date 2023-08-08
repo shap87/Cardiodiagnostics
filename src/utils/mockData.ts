@@ -84,3 +84,43 @@ export const pressReleases = [
       'CHICAGO – Cardio Diagnostics Holdings, Inc (Nasdaq: CDIO), an artificial intelligence-powered precision cardiovascular medicine company, today announced Dr. Damon Broyles, MD, the VP of Clinical Innovation at Mercy Technology Services (MTS), the technical support arm of Mercy Healthcare, has joined Cardio Diagnostics as a strategic advisor.adidas yeezy black nflshop custom hoodies for men gay sex toys nike air jordan 11 cool grey dallas cowboys game nike air max 95 womens adidas promo code Human Hair wigs nike air max mens real hair wigs near me best nfl uniforms mens nike air max 90 sale jordan 4 cheap custom football jerseys',
   },
 ]
+
+export const blog = [
+  {
+    id: 'the-interplay-of-socioeconomic-status-and-risk-for-heart-disease',
+    image: '/images/mock/blog-5-4.webp',
+    title: 'The Interplay of Socioeconomic Status and Risk for Heart Disease',
+    date: new Date().toISOString(),
+    user: {
+      id: 1,
+      name: 'Admin',
+    },
+    content:
+      'Socioeconomic status (SES) is a complex construct that combines variables such as education, income and occupation into a single variable. Although researchers can parcel SES into dozens of distinct levels, for most purposes, SES can be conceptualized as being high, medium or low. In the United States, individuals typically with high SES are often physicians, lawyers or business leaders, while those with low SES are frequently unemployed or students.adidas yeezy black nflshop custom hoodies for men gay sex toys nike air jordan 11 cool grey dallas cowboys game nike air max 95 womens adidas promo code Human Hair wigs nike air max mens real hair wigs near me best nfl uniforms mens nike air max 90 sale jordan 4 cheap custom football jerseys.',
+  },
+  {
+    id: 'what-women-over-the-age-of-50-should-know-about-coronary-heart-disease-prevention',
+    image: '/images/blog-5-6.webp',
+    title:
+      'What Women Over The Age Of 50 Should Know About Coronary Heart Disease Prevention',
+    date: new Date().toISOString(),
+    user: {
+      id: 1,
+      name: 'Admin',
+    },
+    content:
+      'As you get older, it becomes increasingly more important to take the necessary steps to maintain a healthy heart. Coronary heart disease is a leading cause of mortality and morbidity rates in women. In fact, in high-income countries, coronary heart disease has become one of the major causes of death among women compared to lower respiratory tract infections, neonatal disorders, diarrhea, and malaria in low-income countries.',
+  },
+  {
+    id: 'physical-inactivity-and-coronary-heart-disease',
+    image: '/images/mock/blog-5-25.webp',
+    title: 'Physical Inactivity and Coronary Heart Disease',
+    date: new Date().toISOString(),
+    user: {
+      id: 1,
+      name: 'Admin',
+    },
+    content:
+      'How Much Movement Is Enough?cheap nfl jerseys yeezy adidas yeezy adidas shoes nike air jordan 1 retro cheap sex toys for men gay sex toys air jordan store cheap nfl jerseys lovense sex toys nike air jordan retro 4 best human hair wigs online full lace human hair wigs nike air jordan 1 low 49ers Jerseys.',
+  },
+]
