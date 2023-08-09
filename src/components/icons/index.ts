@@ -1,2 +1,6 @@
 export { ChevronLeftIcon } from './ChevronLeftIcon'
 export { ChevronRightIcon } from './ChevronRightIcon'
+export { MagnifyingGlassIcon } from './MagnifyingGlassIcon'
+export { LocationPinIcon } from './LocationPinIcon'
+export { FilterIcon } from './FilterIcon'
+export { ListIcon } from './ListIcon'
