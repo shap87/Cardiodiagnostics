@@ -124,3 +124,58 @@ export const blog = [
       'How Much Movement Is Enough?cheap nfl jerseys yeezy adidas yeezy adidas shoes nike air jordan 1 retro cheap sex toys for men gay sex toys air jordan store cheap nfl jerseys lovense sex toys nike air jordan retro 4 best human hair wigs online full lace human hair wigs nike air jordan 1 low 49ers Jerseys.',
   },
 ]
+
+export const science = [
+  {
+    id: 'a-next-generation-integrated-genetic-epigenetic-algorithm-to-predict-coronary-heart-disease',
+    image: '/images/mock/next-generation.webp',
+    title:
+      'A Next-Generation Integrated Genetic-Epigenetic Algorithm to Predict Coronary Heart Disease',
+    date: new Date().toISOString(),
+    user: {
+      id: 1,
+      name: 'Admin',
+    },
+    content:
+      'A Next-Generation Integrated Genetic-Epigenetic Algorithm to Predict Coronary Heart Disease Author(s): Meeshanthini V Dogan, Cardio Diagnostics, Coralville, IA; Isabella Grumbach, Jacob Michaelson, Robert Philibert, University of Iowa, Iowa City, IA.',
+  },
+  {
+    id: 'a-rapid-and-highly-sensitive-artificial-intelligence-based-dna-test-for-3-year-risk-for-incident-coronary-heart-disease',
+    image: '/images/mock/rapid_highly.webp',
+    title:
+      'A Rapid and Highly Sensitive Artificial Intelligence-Based DNA Test for 3-Year Risk for Incident Coronary Heart Disease',
+    date: new Date().toISOString(),
+    user: {
+      id: 1,
+      name: 'Admin',
+    },
+    content:
+      'Precision Cardiovascular Medicine: A Rapid and Highly Sensitive Artificial Intelligence-Based Integrated Genetic-Epigenetic DNA Test for 3-Year Risk for Incident Coronary Heart Disease. Author(s): Meesha Dogan, Cardio Diagnostics, Coralville IA; Stacey Knight, Intermountain Healthcare, Salt Lake City, UT; Amaury Lendasse, University of Houston, Houston TX; Kirk Knowlton, Intermountain Healthcare, Salt Lake City, UT; Rob Philibert, Cardio Diagnostics, Coralville IA.',
+  },
+  {
+    id: 'an-integrated-genetic-epigenetic-tool-for-predicting-atherothrombotic-brain-infarction',
+    image: '/images/mock/genetic_epigenetic.webp',
+    title:
+      'An Integrated Genetic-Epigenetic Tool for Predicting Atherothrombotic Brain Infarction',
+    date: new Date().toISOString(),
+    user: {
+      id: 1,
+      name: 'Admin',
+    },
+    content:
+      'An Integrated Genetic-Epigenetic Tool for Predicting Atherothrombotic Brain Infarction Author(s): Meesha Dogan and Rob Philibert, Cardio Diagnostics, Coralville IA. Presented: American Heart Association Scientific Sessions 2018',
+  },
+  {
+    id: 'a-next-generation-artificial-intelligence-based-integrated-genetic-epigenetic-prediction-of-5-year-risk-for-coronary-heart-disease',
+    image: '/images/mock/artificial_intelligence.webp',
+    title:
+      'A Next-Generation Artificial Intelligence-Based Integrated Genetic-Epigenetic Prediction of 5-Year Risk for Coronary Heart Disease',
+    date: new Date().toISOString(),
+    user: {
+      id: 1,
+      name: 'Admin',
+    },
+    content:
+      'A Next-Generation Artificial Intelligence-Based Integrated Genetic-Epigenetic Prediction of 5-Year Risk for Coronary Heart Disease Author(s): Meesha Dogan, Cardio Diagnostics, Coralville IA; Ron Simons, Steve Beach, University of Georgia, Athens GA; Amaury Lendasse, University of Houston, Houston TX; Rob Philibert, Cardio Diagnostics, Coralville IA. Presented: American Heart Association Scientific Sessions 2018',
+  },
+]
