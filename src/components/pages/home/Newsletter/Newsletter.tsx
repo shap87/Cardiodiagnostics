@@ -36,10 +36,18 @@ export const Newsletter = () => {
                 </p>
                 <div className="text-left flex flex-wrap items-start justify-between">
                   <label className="w-full md:w-[48%]">
-                    <Field name="name" placeholder="Name" />
+                    <Field
+                      name="name"
+                      placeholder="Name"
+                      className="rounded-[1px]"
+                    />
                   </label>
                   <label className="w-full md:w-[48%]">
-                    <Field name="email" placeholder="Email Address" />
+                    <Field
+                      name="email"
+                      placeholder="Email Address"
+                      className="rounded-[1px]"
+                    />
                     <ErrorMessage
                       name="email"
                       component="p"

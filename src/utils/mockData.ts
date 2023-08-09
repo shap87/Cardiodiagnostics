@@ -179,3 +179,94 @@ export const science = [
       'A Next-Generation Artificial Intelligence-Based Integrated Genetic-Epigenetic Prediction of 5-Year Risk for Coronary Heart Disease Author(s): Meesha Dogan, Cardio Diagnostics, Coralville IA; Ron Simons, Steve Beach, University of Georgia, Athens GA; Amaury Lendasse, University of Houston, Houston TX; Rob Philibert, Cardio Diagnostics, Coralville IA. Presented: American Heart Association Scientific Sessions 2018',
   },
 ]
+
+export const events = [
+  { id: 1, title: '', content: '', image: '/images/mock/beckers-webinar.webp' },
+  {
+    id: 2,
+    title: '',
+    content: '',
+    image: '/images/mock/beckers-webinar-1.webp',
+  },
+  {
+    id: 3,
+    title: '',
+    content: '',
+    image: '/images/mock/beckers-webinar-2.webp',
+  },
+  {
+    id: 4,
+    title: '',
+    content: '',
+    image: '/images/mock/beckers-webinar-3.webp',
+  },
+  {
+    id: 5,
+    title: '',
+    content: '',
+    image: '/images/mock/beckers-webinar-4.webp',
+  },
+]
+
+export const video = [
+  {
+    id: 'video1',
+    image: '/images/healthy-employees.png',
+    title: 'video1',
+    date: new Date().toISOString(),
+    user: {
+      id: 1,
+      name: 'Admin',
+    },
+    content:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+  },
+  {
+    id: 'video2',
+    image: '/images/nurse-img.png',
+    title: 'video2',
+    date: new Date().toISOString(),
+    user: {
+      id: 1,
+      name: 'Admin',
+    },
+    content:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+  },
+  {
+    id: 'video3',
+    image: '/images/clinical-people.png',
+    title: 'video3',
+    date: new Date().toISOString(),
+    user: {
+      id: 1,
+      name: 'Admin',
+    },
+    content:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+  },
+  {
+    id: 'video4',
+    image: '/images/Clinician-Involvement.png',
+    title: 'video4',
+    date: new Date().toISOString(),
+    user: {
+      id: 1,
+      name: 'Admin',
+    },
+    content:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+  },
+  {
+    id: 'video5',
+    image: '/images/heart-health-work-benefits.png',
+    title: 'video5',
+    date: new Date().toISOString(),
+    user: {
+      id: 1,
+      name: 'Admin',
+    },
+    content:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+  },
+]
