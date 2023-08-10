@@ -52,7 +52,19 @@ export const EventsFilterModal: FC<EventsFilterModalProps> = ({
     !values.locationOption &&
     values.categories.length === 0 &&
     values.tags.length === 0
-  console.log(clearButtonDisabled)
+
+  const getActiveFiltersCount = () => {
+    let count = 0
+    if (values.query) count++
+    if (values.location) count++
+    if (values.date) count++
+    if (values.locationOption) count++
+    if (values.categories.length > 0) count++
+    if (values.tags.length > 0) count++
+    return count
+  }
+
+  const activeFilterCount = getActiveFiltersCount()
   return (
     <ModalBaseLayout
       show={show}
@@ -67,7 +79,9 @@ export const EventsFilterModal: FC<EventsFilterModalProps> = ({
             type="button"
             onClick={() => resetForm()}
           >
-            Clear All
+            {activeFilterCount > 0
+              ? `Clear All (${activeFilterCount})`
+              : 'Clear All'}
           </button>
           <button className="bg-[#3372f0] text-white rounded-[1px] uppercase h-[38px] leading-[38px] px-7 text-[11px] rounded-[4px] tracking-[1px] font-semibold">
             Search

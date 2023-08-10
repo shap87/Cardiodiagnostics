@@ -14,6 +14,7 @@ export default function Events() {
             variant="picture"
           />
           <Filter />
+          <p className="py-10 text-lg">No events</p>
         </div>
       </section>
     </Layout>
