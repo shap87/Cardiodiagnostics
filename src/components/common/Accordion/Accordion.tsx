@@ -1,34 +1,66 @@
 'use client'
 import { FC, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import cn from 'classnames'
+import {
+  motion,
+  AnimatePresence,
+  AnimationControls,
+  TargetAndTransition,
+  VariantLabels,
+} from 'framer-motion'
+import { CircleMinusSolidIcon, CirclePlusSolidIcon } from '@/components/icons'
 
 interface AccordionProps {
-  title: string
-  innerText: string
+  title: string | JSX.Element
+  closedStateIcon?: React.ReactNode
+  openedStateIcon?: React.ReactNode
+  classname?: string
+  headerClassname?: string
+  animate?: (
+    open: boolean,
+  ) => boolean | AnimationControls | TargetAndTransition | VariantLabels
+  children: JSX.Element
 }
 
-export const Accordion: FC<AccordionProps> = ({ title, innerText }) => {
+export const Accordion: FC<AccordionProps> = ({
+  title,
+  children,
+  classname,
+  headerClassname,
+  animate,
+  closedStateIcon,
+  openedStateIcon,
+}) => {
   const [open, setOpen] = useState(false)
 
   return (
     <motion.div
-      onClick={() => setOpen((prev) => !prev)}
-      animate={{
-        backgroundColor: open ? '#fff' : '#f4f4f4',
-      }}
-      className="py-4 px-5 border border solid border-[#d9d9d9] flex flex-col cursor-pointer"
+      animate={animate?.(open)}
+      className={cn('flex flex-col cursor-pointer', classname)}
     >
       <AnimatePresence>
-        <div className="flex items-center justify-between">
-          <h3 className="text-xl font-medium">{title}</h3>
-          <img
-            src={
-              open
-                ? '/images/circle-minus-solid.svg'
-                : '/images/circle-plus-solid.svg'
-            }
-            alt=""
-          />
+        <div
+          className="flex items-center justify-between"
+          onClick={() => setOpen((prev) => !prev)}
+        >
+          {typeof title === 'string' ? (
+            <h3 className={cn('text-xl font-medium', headerClassname)}>
+              {title}
+            </h3>
+          ) : (
+            title
+          )}
+          {open ? (
+            openedStateIcon ? (
+              openedStateIcon
+            ) : (
+              <CircleMinusSolidIcon />
+            )
+          ) : closedStateIcon ? (
+            closedStateIcon
+          ) : (
+            <CirclePlusSolidIcon />
+          )}
         </div>
         {open && (
           <motion.div
@@ -41,7 +73,7 @@ export const Accordion: FC<AccordionProps> = ({ title, innerText }) => {
             }}
             transition={{ duration: 0.4 }}
           >
-            <p className="pt-5">{innerText}</p>
+            {children}
           </motion.div>
         )}
       </AnimatePresence>

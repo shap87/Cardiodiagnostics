@@ -5,14 +5,16 @@ import cn from 'classnames'
 
 // components
 import { Animation, Button } from '@/components/common'
+import { ChevronLeftIcon, ChevronRightIcon } from '@/components/icons'
 
 interface SliderProps {
-  items: { title: string; content: string; image?: string }[]
+  items: { title?: string; content?: string; image?: string }[]
   backgroundSrc?: string | string[]
+  variant?: 'card' | 'picture'
   classname?: string
 }
 
-export function Slider({ items, classname }: SliderProps) {
+export function Slider({ items, classname, variant = 'card' }: SliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const onNext = () => {
@@ -38,7 +40,9 @@ export function Slider({ items, classname }: SliderProps) {
         },
       })}
     >
-      <div className="absolute left-0 top-0 w-full h-full bg-[rgba(223,31,90,0.66)]" />
+      {variant === 'card' && (
+        <div className="absolute left-0 top-0 w-full h-full bg-[rgba(223,31,90,0.66)]" />
+      )}
       {items.map((item, index) => (
         <Animation
           type="fromBottom"
@@ -55,9 +59,11 @@ export function Slider({ items, classname }: SliderProps) {
             <p className="text-white text-center mb-5 lg:text-base !leading-[1.8] line-clamp-3">
               {item.content}
             </p>
-            <Button color="white" type="button" arrow>
-              Read more
-            </Button>
+            {variant === 'card' && (
+              <Button color="white" type="button" arrow>
+                Read more
+              </Button>
+            )}
           </div>
         </Animation>
       ))}
@@ -66,7 +72,8 @@ export function Slider({ items, classname }: SliderProps) {
           <div
             key={index}
             className={cn(
-              'rounded-full w-2 h-2 bg-white',
+              'rounded-full w-2 h-2',
+              variant === 'card' ? 'bg-white' : 'bg-[rgba(223,31,90,0.66)]',
               currentIndex === index ? 'opacity-100' : 'opacity-50',
             )}
           />
@@ -76,13 +83,17 @@ export function Slider({ items, classname }: SliderProps) {
         onClick={onPrev}
         className="p-5 absolute top-1/2 -translate-y-1/2 lg:left-8 left-0 cursor-pointer opacity-50 hover:opacity-100 transition"
       >
-        <img src="/images/chevron-left.svg" alt="left" />
+        <ChevronLeftIcon
+          classname={cn(variant === 'card' ? 'fill-white' : 'fill-slate-500')}
+        />
       </button>
       <button
         onClick={onNext}
         className="p-5 absolute top-1/2 -translate-y-1/2 lg:right-8 right-0 cursor-pointer opacity-50 hover:opacity-100 transition"
       >
-        <img src="/images/chevron-right.svg" alt="right" />
+        <ChevronRightIcon
+          classname={cn(variant === 'card' ? 'fill-white' : 'fill-slate-500')}
+        />
       </button>
     </div>
   )

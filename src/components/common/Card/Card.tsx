@@ -8,6 +8,7 @@ interface CardProps {
   date: string
   content: string
   section?: string
+  hideReadMore?: boolean
 }
 
 export const Card: FC<CardProps> = ({
@@ -17,11 +18,16 @@ export const Card: FC<CardProps> = ({
   date,
   content,
   section,
+  hideReadMore,
 }) => {
   return (
     <article className="flex flex-col py-5">
       {image && (
-        <img src={image} className="rounded-[20px] mb-7 -mt-5 h-52" alt="" />
+        <img
+          src={image}
+          className="rounded-[20px] mb-7 -mt-5 h-52 object-cover"
+          alt=""
+        />
       )}
       <div className="px-5">
         <h2 className="text-[19px] leading-[1.4] mb-2.5">
@@ -33,12 +39,14 @@ export const Card: FC<CardProps> = ({
             (section ? section : 'Uncategorized')}
         </p>
         <p className="line-clamp-[9] text-base !leading-[1.8]">{content}</p>
-        <Link
-          className="text-[#16c2d5] font-bold text-base mt-1"
-          href={section ? `/${section}/${id}` : `/${id}`}
-        >
-          read more
-        </Link>
+        {!hideReadMore && (
+          <Link
+            className="text-[#16c2d5] font-bold text-base mt-1"
+            href={section ? `/${section}/${id}` : `/${id}`}
+          >
+            read more
+          </Link>
+        )}
       </div>
     </article>
   )

@@ -1,3 +1,4 @@
+'use client'
 // components
 import { Accordion } from '@/components/common'
 
@@ -124,12 +125,30 @@ export const Info = () => {
         <div className="w-full flex flex-wrap justify-between gap-7">
           <div className="flex flex-col w-full lg:w-[36.7%] gap-7">
             {column1.map((el, i) => (
-              <Accordion key={i} title={el.title} innerText={el.description} />
+              <Accordion
+                key={i}
+                title={el.title}
+                classname="py-4 px-5 border border solid border-[#d9d9d9]"
+                animate={(open) => ({
+                  backgroundColor: open ? '#fff' : '#f4f4f4',
+                })}
+              >
+                <p className="pt-5">{el.description}</p>
+              </Accordion>
             ))}
           </div>
           <div className="flex flex-col lg:w-[57.8%] gap-7">
             {column2.map((el, i) => (
-              <Accordion key={i} title={el.title} innerText={el.description} />
+              <Accordion
+                key={i}
+                title={el.title}
+                classname="py-4 px-5 border border solid border-[#d9d9d9]"
+                animate={(open) => ({
+                  backgroundColor: open ? '#fff' : '#f4f4f4',
+                })}
+              >
+                <p className="pt-5">{el.description}</p>
+              </Accordion>
             ))}
           </div>
         </div>
